@@ -1,0 +1,9 @@
+1.Page类是关于分页查询的封装类，提供了泛型，用于指定要查询信息的类型
+
+2.BaseDao抽象类提供了访问数据库的几个通用方法，也提供了泛型来指定要操作的数据的Java封装类型，使用反射得到具体的运行时类型。
+	以后再定义XxxDao时，只需继承BaseDao，然后实现对应的接口即可
+
+3.BaseServlet继承了HttpServlet，并重写了 doGet 和 doPost 方法，在 doGet 方法中使用反射得到具体要执行的方法名，参数为method。
+	以后要写Servlet的时候，直接继承BaseServlet即可
+
+4.JDBCUtils是一个用来得到和释放数据库连接的工具类
